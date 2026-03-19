@@ -1,0 +1,159 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  background: #0a0a0a;
+  border: 1px solid #333;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 300px;
+}
+
+.panel h3 {
+  color: #FFCC44;
+  margin-bottom: 5px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}
+
+.display {
+  font-size: 2.5em;
+  letter-spacing: 15px;
+  color: #fff;
+  margin: 20px 0;
+  min-height: 50px;
+  font-family: monospace;
+}
+
+/* Numeric keypad */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.key {
+  padding: 15px;
+  font-size: 1.2em;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.key:hover {
+  background: #333;
+  border-color: #FFCC44;
+}
+
+.key:active {
+  transform: scale(0.95);
+}
+
+.action {
+  background: #1a1508;
+  border-color: rgba(255, 204, 68, 0.267);
+}
+
+/* Alpha keypad */
+.keypadAlpha {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.alphaRow {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.keyAlpha {
+  width: 42px;
+  height: 42px;
+  font-size: 1em;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keyAlpha:hover {
+  background: #333;
+  border-color: #FFCC44;
+}
+
+.keyAlpha:active {
+  transform: scale(0.95);
+}
+
+.actionAlpha {
+  width: 80px;
+  background: #1a1508;
+  border-color: rgba(255, 204, 68, 0.267);
+  font-weight: bold;
+  color: #FFCC44;
+}
+
+.result {
+  margin-top: 15px;
+  min-height: 24px;
+  font-size: 0.9em;
+}
+
+.closeBtn {
+  margin-top: 15px;
+  padding: 6px 20px;
+  background: none;
+  border: 1px solid #444;
+  color: #888;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+@media (max-width: 768px), (hover: none) {
+  .keyAlpha {
+    width: 34px;
+    height: 34px;
+    font-size: 0.85em;
+  }
+  .actionAlpha {
+    width: 65px;
+  }
+  .display {
+    font-size: 2em;
+    letter-spacing: 10px;
+  }
+}

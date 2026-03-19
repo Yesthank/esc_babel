@@ -1,0 +1,13 @@
+.flash {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 250;
+  pointer-events: none;
+  font-size: 1.1em;
+  color: #FFCC44;
+  text-align: center;
+  transition: opacity 0.4s;
+  text-shadow: 0 0 20px rgba(255, 204, 68, 0.5);
+}
